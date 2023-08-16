@@ -7,13 +7,14 @@ import StorageIcon from '@mui/icons-material/Storage';
 import MemoryIcon from '@mui/icons-material/Memory';
 import BarChart1 from '../components/BarChart';
 import { ArrowDropDown } from '@mui/icons-material';
+// import OutOfSpaceModal from '../components/OutOfSpaceModal';
 
 
 
 function CircularProgressWithLabelStorage(props) {
     return (
         <Box sx={{ position: 'relative', display: 'inline-flex' }}>
-            <CircularProgress variant="determinate" {...props} />
+            <CircularProgress variant="determinate" {...props} thickness={6} />
             <Box
                 sx={{
                     top: 0,
@@ -26,7 +27,7 @@ function CircularProgressWithLabelStorage(props) {
                     justifyContent: 'center',
                 }}
             >
-                <Typography variant="h7" component="div" color="text.secondary">
+                <Typography variant="h7" component="div" color="text.secondary" sx={{color:props.PColor}}>
                     <strong>{`${Math.round(props.value)}%`}</strong>
                 </Typography>
             </Box>
@@ -54,7 +55,7 @@ const Statistics = () => {
                         </Box>
                         <Box sx={{ width: '100%', marginTop: '10px', display: 'flex', p: 1 }}>
                             <Box width={{ width: '40%', display: 'flex' }}>
-                                <CircularProgressWithLabelStorage value={80} size={100} sx={{ color: '#3BB3E1' }} />;
+                                <CircularProgressWithLabelStorage value={80} size={100} sx={{ color: '#3BB3E1'}} PColor='#3BB3E1'/>;
                             </Box>
                             <Box width={{ width: '60%' }}>
                                 <Box sx={{ width: '100%', display: 'flex', alignItems: 'center', marginTop: '5px' }}>
@@ -86,7 +87,7 @@ const Statistics = () => {
                         </Box>
                         <Box sx={{ width: '100%', marginTop: '10px', display: 'flex', p: 1 }}>
                             <Box width={{ width: '40%', display: 'flex' }}>
-                                <CircularProgressWithLabelStorage value={80} size={100} sx={{ color: '#E7313E' }} />;
+                                <CircularProgressWithLabelStorage value={80} size={100} sx={{ color: '#E7313E' }} PColor='#E7313E'/>;
                             </Box>
                             <Box width={{ width: '60%' }}>
                                 <Box sx={{ width: '100%', display: 'flex', alignItems: 'center', marginTop: '5px' }}>
@@ -118,7 +119,7 @@ const Statistics = () => {
                         </Box>
                         <Box sx={{ width: '100%', marginTop: '10px', display: 'flex', p: 1 }}>
                             <Box width={{ width: '40%', display: 'flex' }}>
-                                <CircularProgressWithLabelStorage value={80} size={100} sx={{ color: '#F3A650' }} />;
+                                <CircularProgressWithLabelStorage value={80} size={100} sx={{ color: '#F3A650' }} PColor='#F3A650'/>;
                             </Box>
                             <Box width={{ width: '60%' }}>
                                 <Box sx={{ width: '100%', display: 'flex', alignItems: 'center', marginTop: '5px' }}>
@@ -146,6 +147,7 @@ const Statistics = () => {
                             </Box>
                             <Box sx={{ float: 'right' }}>
                                 <Button endIcon={<ArrowDropDown/>}> I/O Operations </Button>
+                                {/* <OutOfSpaceModal/> */}
                             </Box>
                         </Box>
                         <BarChart1 />

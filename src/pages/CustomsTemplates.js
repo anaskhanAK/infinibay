@@ -48,8 +48,6 @@ const CustomsTemplates = () => {
                     <TemplatesCard />
                     <TemplatesCard />
                     <TemplatesCard />
-
-
                 </CardContent>
             </Card>
 

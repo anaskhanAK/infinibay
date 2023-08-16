@@ -3,18 +3,44 @@ import { Toolbar, Typography, IconButton, InputBase, Button, Menu, MenuItem, Div
 import MenuIcon from '@mui/icons-material/Menu';
 import { styled, alpha } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
-import EditIcon from '@mui/icons-material/Edit';
-import ArchiveIcon from '@mui/icons-material/Archive';
-import FileCopyIcon from '@mui/icons-material/FileCopy';
-import MoreHorizIcon from '@mui/icons-material/MoreHoriz';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import EmailIcon from '@mui/icons-material/Email';
 import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import Badge from '@mui/material/Badge';
+import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
+import LogoutIcon from '@mui/icons-material/Logout';
 
 
 
+const StyledBadge = styled(Badge)(({ theme }) => ({
+    '& .MuiBadge-badge': {
+        backgroundColor: '#44b700',
+        color: '#44b700',
+        boxShadow: `0 0 0 2px ${theme.palette.background.paper}`,
+        '&::after': {
+            position: 'absolute',
+            top: 0,
+            left: 0,
+            width: '100%',
+            height: '100%',
+            borderRadius: '50%',
+            animation: 'ripple 1.2s infinite ease-in-out',
+            border: '1px solid currentColor',
+            content: '""',
+        },
+    },
+    '@keyframes ripple': {
+        '0%': {
+            transform: 'scale(.8)',
+            opacity: 1,
+        },
+        '100%': {
+            transform: 'scale(2.4)',
+            opacity: 0,
+        },
+    },
+}));
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -146,12 +172,12 @@ export default function Navebar({ handleDrawer }) {
                 />
             </Search>
             <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 4, marginLeft: '10px', background: 'white', width: '40px', height: '40px', borderRadius: '8px' }} >
-                <Badge color="secondary" variant="dot">
+                {/* <Badge color="secondary" variant="dot"> */}
                     <EmailIcon sx={{ color: "#747274" }} />
-                </Badge>
+                {/* </Badge> */}
             </IconButton>
             <IconButton size="large" edge="start" color="inherit" aria-label="menu" sx={{ mr: 2, background: 'white', width: '40px', height: '40px', borderRadius: '8px' }} >
-                <Badge color="secondary" variant="dot">
+                <Badge color="warning" variant="dot">
                     <NotificationsIcon sx={{ color: "#747274" }} />
                 </Badge>
             </IconButton>
@@ -164,11 +190,17 @@ export default function Navebar({ handleDrawer }) {
                 disableElevation
                 onClick={handleClick}
                 endIcon={<KeyboardArrowDownIcon />}
-                sx={{ background: 'white', color: 'black', borderRadius: '8px', paddingLeft: '10px', paddingRight: '10px' }}
+                sx={{ background: 'white', color: 'black', borderRadius: '8px', paddingLeft: '10px', paddingRight: '10px', textTransform: 'capitalize' }}
             >
-                <Avatar alt="Remy Sharp" src="anas.jpg" sx={{ width: 30, height: 30, marginRight: '10px' }} />
-
-                anaskhan
+                <StyledBadge
+                    overlap="circular"
+                    anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
+                    variant="dot"
+                    sx={{ marginRight: '5px' }}
+                >
+                    <Avatar alt="Remy Sharp" src="anas.jpg" sx={{ width: 30, height: 30 }} />
+                </StyledBadge>
+                anas
             </Button>
             <StyledMenu
                 id="demo-customized-menu"
@@ -178,22 +210,18 @@ export default function Navebar({ handleDrawer }) {
                 onClose={handleClose}
             >
                 <MenuItem onClick={handleClose} disableRipple>
-                    <EditIcon />
-                    Edit
+                    anaskhankin1999@gmain.com
                 </MenuItem>
                 <MenuItem onClick={handleClose} disableRipple>
-                    <FileCopyIcon />
-                    Duplicate
+                    <PersonOutlineOutlinedIcon />
+                    Profile
                 </MenuItem>
                 <Divider sx={{ my: 0.5 }} />
                 <MenuItem onClick={handleClose} disableRipple>
-                    <ArchiveIcon />
-                    Archive
+                    <LogoutIcon />
+                    Logout
                 </MenuItem>
-                <MenuItem onClick={handleClose} disableRipple>
-                    <MoreHorizIcon />
-                    More
-                </MenuItem>
+
             </StyledMenu>
         </Toolbar>
     );

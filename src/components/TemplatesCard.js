@@ -18,7 +18,7 @@ export default function TemplatesCard() {
     const mr = "0%"
     return (
         <React.Fragment>
-            <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
+            <Box sx={{ display: 'flex', flexWrap: 'wrap', marginTop: '10px' }}>
                 <Card sx={{ width: wwwww, marginRight: mr, marginLeft: ml, marginBottom: '10px' }}>
                     <CardContent>
                         <img

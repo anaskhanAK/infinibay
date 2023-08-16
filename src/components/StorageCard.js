@@ -17,14 +17,11 @@ const BorderLinearProgress = styled(LinearProgress)(({ theme }) => ({
     height: 10,
     borderRadius: 5,
     backgroundColor: ''
-
 }));
 
 
 const StorageCard = () => {
     const wwwww = '24%'
-    // const www = '100%'
-    // const ww = 160
     const ml = '1%'
     const mr = "0%"
     return (

@@ -4,6 +4,7 @@ import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box'
 import ViewScript from './ViewScriptModal';
+// import CodeViewer from './CodeViewer ';
 
 
 
@@ -29,6 +30,7 @@ export default function ScriptsCard() {
                                 src='VHDs_.png'
                                 height={90}
                             />
+                            {/* <CodeViewer code={`Console.log('sss)`}/> */}
 
                         </Box>
                         <Box sx={{ width: '100%', marginTop: '10px' }}>

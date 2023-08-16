@@ -9,7 +9,7 @@ import CreateModal from './CreateVm';
 
 const VmList = () => {
 
-    const [age, setAge] = React.useState('tamplats');
+    const [age, setAge] = React.useState('Thirty');
     const [open, setOpen] = React.useState(false);
 
     const handleChange = (event) => {
@@ -25,19 +25,17 @@ const VmList = () => {
     };
     return (
         <React.Fragment>
-            <Card sx={{ marginBottom: '30px', p: 1 }}>
+            <Card sx={{ p: 1 }}>
                 <CardContent>
                     <Box sx={{ width: '100%' }}>
-                        <OutlinedInput placeholder="Search..." sx={{ height: '35px', width: '350px', marginRight: '20px' }} />
+                        <OutlinedInput placeholder="Search..." sx={{ height: '35px', width: '350px', marginRight: '10px' }} />
                         <Button variant='contained'> Search </Button>
-                        {/* <CreateButton variant='contained' sx={{ float: 'right' }}> Create a Vm Now</CreateButton> */}
                         <Box sx={{float:'right'}}>
                             <CreateModal />
                         </Box>
-
                     </Box>
 
-                    <Box sx={{ width: '100%', display: 'flex', marginTop: '20px' }}>
+                    <Box sx={{ width: '100%', display: 'flex', marginTop: '10px', alignItems:'center' }}>
 
                         <Box sx={{ width: '60%', display: 'flex' }}>
                             <Typography color='#56bbea' sx={{ marginRight: '5px' }}>
@@ -65,9 +63,9 @@ const VmList = () => {
                                 onOpen={handleOpen}
                                 onChange={handleChange}
                             >
-                                <MenuItem value={10}>Ten</MenuItem>
-                                <MenuItem value={20}>Twenty</MenuItem>
-                                <MenuItem value={30}>Thirty</MenuItem>
+                                <MenuItem value={"Ten"}>Ten</MenuItem>
+                                <MenuItem value={"Twenty"}>Twenty</MenuItem>
+                                <MenuItem value={"Thirty"}>Thirty</MenuItem>
                             </Select>
                         </Box>
                     </Box>

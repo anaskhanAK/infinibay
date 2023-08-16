@@ -29,10 +29,10 @@ import * as React from 'react';
 
 const headerStyle = {
   backgroundImage: `url(${Frame})`,
-  backgroundSize: "cover", // Adjust to 'contain' or other values if needed
+  backgroundSize: "cover",
   backgroundPosition: "center center",
   backgroundRepeat: "no-repeat",
-  height: "800px", // Set the desired height
+  height: "800px",
 };
 
 
