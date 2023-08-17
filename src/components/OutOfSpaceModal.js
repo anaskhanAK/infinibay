@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
+// import { styled } from '@mui/material/styles';
 import { Box, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
@@ -10,29 +10,31 @@ import { useTheme } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
 import LinearProgress from '@mui/material/LinearProgress';
-// import ListSubheader from '@mui/material/ListSubheader';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
 import Collapse from '@mui/material/Collapse';
-// import InboxIcon from '@mui/icons-material/MoveToInbox';
-// import DraftsIcon from '@mui/icons-material/Drafts';
-// import SendIcon from '@mui/icons-material/Send';
 import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
-import StarBorder from '@mui/icons-material/StarBorder';
+import SnapSvg from '../assets/SnapSvg';
+import AppSvg from '../assets/AppSvg';
+import Checkbox from '@mui/material/Checkbox';
+import MessengerSvg from '../assets/MessengerSvg';
+import TranslateSvg from '../assets/TranslateSvg';
+import Link from '@mui/material/Link';
+import DeleteSvg from '../assets/DeleteSvg';
+import DasktopSvg from '../assets/DasktopSvg';
+import FolderSvg from '../assets/FolderSvg';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 
 
 
-
-const CreateButton = styled(Button)(({ theme }) => ({
-    color: 'white',
-    backgroundColor: '#FF6A69',
-    '&:hover': {
-        backgroundColor: '#FF6A69',
-    },
-}));
+// const CreateButton = styled(Button)(({ theme }) => ({
+//     color: 'white',
+//     backgroundColor: '#FF6A69',
+//     '&:hover': {
+//         backgroundColor: '#FF6A69',
+//     },
+// }));
 
 
 export default function OutOfSpaceModal() {
@@ -56,9 +58,9 @@ export default function OutOfSpaceModal() {
 
     return (
         <div>
-            <CreateButton variant="contained" onClick={handleClickOpen} >
-                Create a New Account
-            </CreateButton>
+            <button style={{ border: 'none', background: 'transparent' }} onClick={handleClickOpen}>
+                <ChevronRightIcon sx={{ color: 'black' }} />
+            </button>
             <Dialog
                 fullScreen={fullScreen}
                 open={open}
@@ -77,9 +79,9 @@ export default function OutOfSpaceModal() {
                     </Box>
                 </DialogTitle>
                 <DialogContent>
-                    <Box sx={{ width: '400px', fontSize: '14px' }}>
+                    <Box sx={{ width: '400px', fontSize: '14px', maxHeight: '100vh', overflowY: 'hidden' }}>
                         <Box sx={{ width: '100%' }}>
-                            <LinearProgress variant="determinate" value={80} sx={{ height: '10px', borderRadius: '12px', backgroundColor: '#E7E7E7', '& .MuiLinearProgress-bar': { backgroundColor: '#E82E2E' } }} />
+                            <LinearProgress variant="determinate" value={80} sx={{ height: '10px', marginBottom: '2px', borderRadius: '12px', backgroundColor: '#E7E7E7', '& .MuiLinearProgress-bar': { backgroundColor: '#E82E2E' } }} />
                             <Box sx={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
                                 <Typography variant="caption" color='#516F91'>
                                     <strong>118 of 120 GB used</strong>
@@ -93,39 +95,128 @@ export default function OutOfSpaceModal() {
                                 <Typography>
                                     <strong>Recommended for cleanup</strong>
                                 </Typography>
-                                <Box sx={{ width: '100%', display: "flex" }}>
+                                <Box sx={{ width: '100%' }}>
                                     <List sx={{ width: '100%' }}>
                                         <ListItemButton onClick={handleClickList}>
-                                            <Box sx={{ width: '100%', display: 'flex' }}>
+                                            <Box sx={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
                                                 <Box sx={{ width: '10%' }}>
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 20 20" fill="none">
-                                                        <g clip-path="url(#clip0_177_1537)">
-                                                            <path d="M8 11H1C0.734784 11 0.48043 11.1054 0.292893 11.2929C0.105357 11.4804 0 11.7348 0 12V19C0 19.2652 0.105357 19.5196 0.292893 19.7071C0.48043 19.8946 0.734784 20 1 20H8C8.26522 20 8.51957 19.8946 8.70711 19.7071C8.89464 19.5196 9 19.2652 9 19V12C9 11.7348 8.89464 11.4804 8.70711 11.2929C8.51957 11.1054 8.26522 11 8 11ZM7 18H2V13H7V18ZM19 0H12C11.7348 0 11.4804 0.105357 11.2929 0.292893C11.1054 0.48043 11 0.734784 11 1V8C11 8.26522 11.1054 8.51957 11.2929 8.70711C11.4804 8.89464 11.7348 9 12 9H19C19.2652 9 19.5196 8.89464 19.7071 8.70711C19.8946 8.51957 20 8.26522 20 8V1C20 0.734784 19.8946 0.48043 19.7071 0.292893C19.5196 0.105357 19.2652 0 19 0ZM18 7H13V2H18V7ZM19 11H12C11.7348 11 11.4804 11.1054 11.2929 11.2929C11.1054 11.4804 11 11.7348 11 12V19C11 19.2652 11.1054 19.5196 11.2929 19.7071C11.4804 19.8946 11.7348 20 12 20H19C19.2652 20 19.5196 19.8946 19.7071 19.7071C19.8946 19.5196 20 19.2652 20 19V12C20 11.7348 19.8946 11.4804 19.7071 11.2929C19.5196 11.1054 19.2652 11 19 11ZM18 18H13V13H18V18ZM8 0H1C0.734784 0 0.48043 0.105357 0.292893 0.292893C0.105357 0.48043 0 0.734784 0 1V8C0 8.26522 0.105357 8.51957 0.292893 8.70711C0.48043 8.89464 0.734784 9 1 9H8C8.26522 9 8.51957 8.89464 8.70711 8.70711C8.89464 8.51957 9 8.26522 9 8V1C9 0.734784 8.89464 0.48043 8.70711 0.292893C8.51957 0.105357 8.26522 0 8 0ZM7 7H2V2H7V7Z" fill="#37A1D5" />
-                                                        </g>
-                                                        <defs>
-                                                            <clipPath id="clip0_177_1537">
-                                                                <rect width="25" height="25" fill="white" />
-                                                            </clipPath>
-                                                        </defs>
-                                                    </svg>
+                                                    <AppSvg />
                                                 </Box>
-                                                <Box sx={{width:'80%', display:'flex', justifyContent:'space-between'}}>
-                                                    <Typography>Apps & features</Typography>
-                                                    <Typography>16.2 GB</Typography>
+                                                <Box sx={{ width: '86%', marginTop: '-4px' }}>
+                                                    <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                                                        <Typography>Apps & features</Typography>
+                                                        <Typography>16.2 GB</Typography>
+                                                    </Box>
+                                                    <LinearProgress variant="determinate" value={80} sx={{ height: '4', borderRadius: '12px' }} />
+                                                    <Typography variant='caption'>Uninstall unused or undesired apps & features</Typography>
+                                                </Box>
+                                                <Box sx={{ width: '4%' }}>
+                                                    {openList ? <ExpandLess /> : <ExpandMore />}
                                                 </Box>
                                             </Box>
-                                            {openList ? <ExpandLess /> : <ExpandMore />}
+
                                         </ListItemButton>
                                         <Collapse in={openList} timeout="auto" unmountOnExit>
-                                            <List component="div" disablePadding>
-                                                <ListItemButton sx={{ pl: 9 }}>
-                                                    <ListItemIcon>
-                                                        <StarBorder />
-                                                    </ListItemIcon>
-                                                    <ListItemText primary="Starred" />
+                                            <Typography sx={{ ml: 6 }} variant='subtitle2'>Delete apps you no longer need.</Typography>
+                                            <List component="div" disablePadding >
+                                                <ListItemButton sx={{ pl: 6, pr: 4 }}>
+                                                    <Box sx={{ width: '12%' }}>
+                                                        <SnapSvg />
+                                                    </Box>
+                                                    <Box sx={{ width: '82%' }}>
+                                                        <Typography variant='subtitle2' sx={{ marginBottom: '-6px' }}>Snapchat</Typography>
+                                                        <Typography variant='caption'>137 MB</Typography>
+                                                    </Box>
+                                                    <Box sx={{ width: '4%' }}>
+                                                        <Checkbox />
+                                                    </Box>
+                                                </ListItemButton>
+
+                                                <ListItemButton sx={{ pl: 6, pr: 4 }}>
+                                                    <Box sx={{ width: '12%' }}>
+                                                        <MessengerSvg />
+                                                    </Box>
+                                                    <Box sx={{ width: '82%' }}>
+                                                        <Typography variant='subtitle2' sx={{ marginBottom: '-6px' }}>Messenger</Typography>
+                                                        <Typography variant='caption'>288 MB</Typography>
+                                                    </Box>
+                                                    <Box sx={{ width: '4%' }}>
+                                                        <Checkbox />
+                                                    </Box>
+                                                </ListItemButton>
+
+                                                <ListItemButton sx={{ pl: 6, pr: 4 }}>
+                                                    <Box sx={{ width: '12%' }}>
+                                                        <TranslateSvg />
+                                                    </Box>
+                                                    <Box sx={{ width: '82%' }}>
+                                                        <Typography variant='subtitle2' sx={{ marginBottom: '-6px' }}>Translate</Typography>
+                                                        <Typography variant='caption'>345 MB</Typography>
+                                                    </Box>
+                                                    <Box sx={{ width: '4%' }}>
+                                                        <Checkbox />
+                                                    </Box>
                                                 </ListItemButton>
                                             </List>
+                                            <Link href="#" sx={{ p: 6 }}>See more apps and features</Link>
                                         </Collapse>
+
+                                        <ListItemButton >
+                                            <Box sx={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
+                                                <Box sx={{ width: '10%' }}>
+                                                    <DasktopSvg />
+                                                </Box>
+                                                <Box sx={{ width: '86%', marginTop: '-4px' }}>
+                                                    <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                                                        <Typography>Inactive VMs (last 3-6 months)</Typography>
+                                                        <Typography>14.5 GB</Typography>
+                                                    </Box>
+                                                    <LinearProgress variant="determinate" value={80} sx={{ height: '4', borderRadius: '12px' }} />
+                                                    <Typography variant='caption'>Remove inactive VMs</Typography>
+                                                </Box>
+                                                <Box sx={{ width: '4%' }}>
+                                                    <ExpandMore />
+                                                </Box>
+                                            </Box>
+                                        </ListItemButton>
+
+                                        <ListItemButton >
+                                            <Box sx={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
+                                                <Box sx={{ width: '10%' }}>
+                                                    <DeleteSvg />
+                                                </Box>
+                                                <Box sx={{ width: '86%', marginTop: '-4px' }}>
+                                                    <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                                                        <Typography>Temporary files</Typography>
+                                                        <Typography>11 GB</Typography>
+                                                    </Box>
+                                                    <LinearProgress variant="determinate" value={80} sx={{ height: '4', borderRadius: '12px' }} />
+                                                    <Typography variant='caption'>Remove temporary files</Typography>
+                                                </Box>
+                                                <Box sx={{ width: '4%' }}>
+                                                    <ExpandMore />
+                                                </Box>
+                                            </Box>
+                                        </ListItemButton>
+
+                                        <ListItemButton >
+                                            <Box sx={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
+                                                <Box sx={{ width: '10%' }}>
+                                                    <FolderSvg />
+                                                </Box>
+                                                <Box sx={{ width: '86%', marginTop: '-4px' }}>
+                                                    <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
+                                                        <Typography>ISOs (last 3-6 months)</Typography>
+                                                        <Typography>2.5 GB</Typography>
+                                                    </Box>
+                                                    <LinearProgress variant="determinate" value={80} sx={{ height: '4', borderRadius: '12px' }} />
+                                                    <Typography variant='caption'>Remove inactive ISOs</Typography>
+                                                </Box>
+                                                <Box sx={{ width: '4%' }}>
+                                                    <ExpandMore />
+                                                </Box>
+                                            </Box>
+                                        </ListItemButton>
                                     </List>
                                 </Box>
                             </Box>

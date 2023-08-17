@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { styled } from '@mui/material/styles';
 import { Box, Typography } from '@mui/material';
 import Button from '@mui/material/Button';
 import Dialog from '@mui/material/Dialog';
@@ -9,17 +8,10 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import { useTheme } from '@mui/material/styles';
 import IconButton from '@mui/material/IconButton';
 import CloseIcon from '@mui/icons-material/Close';
-import TextField from '@mui/material/TextField';// import { DemoContainer } from '@mui/x-date-pickers/internals/demo';
+import { Stop } from '@mui/icons-material';
+import TimePickerC from './TimePickerC';
+import DayPickerC from './DayPickerC';
 
-
-
-const CreateButton = styled(Button)(({ theme }) => ({
-    color: 'white',
-    backgroundColor: '#FF6A69',
-    '&:hover': {
-        backgroundColor: '#FF6A69',
-    },
-}));
 
 
 export default function SheduleModal() {
@@ -38,9 +30,9 @@ export default function SheduleModal() {
 
     return (
         <div>
-            <CreateButton variant="contained" onClick={handleClickOpen} >
-                Create a Vm Now
-            </CreateButton>
+            <Button variant="outlined" startIcon={<Stop />} onClick={handleClickOpen}>
+                Schedule
+            </Button>
             <Dialog
                 fullScreen={fullScreen}
                 open={open}
@@ -63,9 +55,22 @@ export default function SheduleModal() {
                         <Box sx={{ width: '100%' }}>
                             Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incidi dunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incidi dunt ut labore et dolore magna aliqua.Lorem ipsum dolor sit amet, consectetur adipis cing elit, sed do eiusmod tempor incidi dunt ut labore et dolore magna aliqua.
                         </Box>
-
+                        <Box sx={{ width: '100%', display: 'flex', justifyContent: 'space-between', mt: 4 }}>
+                            <Box sx={{ width: '48%' }}>
+                                <Typography><strong>Pick a Time:</strong></Typography>
+                                <TimePickerC />
+                            </Box>
+                            <Box sx={{ width: '48%' }}>
+                                <Typography><strong>Pick a Day:</strong></Typography>
+                                <DayPickerC />
+                            </Box>
+                        </Box>
+                        <Box sx={{ float: 'right', mt:2 }}>
+                                <Button variant="contained" startIcon={<Stop />} onClick={handleClose}>
+                                    Schedule
+                                </Button>
+                            </Box>
                     </Box>
-
                 </DialogContent>
             </Dialog >
         </div >

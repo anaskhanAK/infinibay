@@ -25,9 +25,11 @@ const DrawerHeader = styled('div')(({ theme }) => ({
 export default function Sidebar({ open }) {
 
     const navigate = useNavigate()
+    const [selected, setSelected] = React.useState(1)
 
-    const HandleNavigation = (Link) => {
+    const HandleNavigation = (Link, id) => {
         console.log('Navigating to:', Link);
+        setSelected(id)
         navigate(Link)
     }
 
@@ -46,7 +48,7 @@ export default function Sidebar({ open }) {
             <List>
                 {AdminBarData.map((text, index) => (
                     <ListItem key={text.title} disablePadding sx={{ display: 'block' }}>
-                        <ListItemButton sx={{ minHeight: 48, justifyContent: open ? 'initial' : 'center', px: 2.5 }} onClick={() => HandleNavigation(text.link)}>
+                        <ListItemButton sx={{ minHeight: 48, justifyContent: open ? 'initial' : 'center', px: 2.5 }} onClick={() => HandleNavigation(text.link, text.id)} selected={selected === text.id}>
                             <ListItemIcon sx={{ minWidth: 0, mr: open ? 3 : 'auto', justifyContent: 'center' }}>
                                 {text.icon}
                             </ListItemIcon>

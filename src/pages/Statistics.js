@@ -40,8 +40,8 @@ function CircularProgressWithLabelStorage(props) {
 
 const Statistics = () => {
     return (
-        <Card>
-            <CardContent>
+        <Card >
+            <CardContent >
                 <Box sx={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
                     <Box sx={{ width: '32%', background: 'linear-gradient(42deg, #F4FAFF 0%, #E3F3FE 100%)', height: '210px', borderRadius: '15px', p: 2 }}>
                         <Box sx={{ width: '100%' }}>
@@ -138,7 +138,7 @@ const Statistics = () => {
                         </Box>
                     </Box>
                 </Box>
-                <Card sx={{ marginTop: '20px' }}>
+                <Card sx={{ marginTop: '20px', backgroundColor:'#E3F2FD' }}>
                     <CardContent>
                         <Box sx={{ width: '100%', display: 'flex', justifyContent: 'space-between' }}>
                             <Box>
@@ -146,7 +146,7 @@ const Statistics = () => {
                                 <Typography> I/O operations count (In thousands) </Typography>
                             </Box>
                             <Box sx={{ float: 'right' }}>
-                                <Button endIcon={<ArrowDropDown/>}> I/O Operations </Button>
+                                <Button endIcon={<ArrowDropDown/>} sx={{backgroundColor:'white'}}> I/O Operations </Button>
                                 {/* <OutOfSpaceModal/> */}
                             </Box>
                         </Box>

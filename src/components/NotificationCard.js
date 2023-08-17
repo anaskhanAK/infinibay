@@ -5,6 +5,7 @@ import CircleIcon from '@mui/icons-material/Circle';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ListItemButton from '@mui/material/ListItemButton';
 import { Card, CardContent, Grid, Typography, Button, CardHeader } from '@mui/material';
+import OutOfSpaceModal from './OutOfSpaceModal';
 
 
 export default function NotificationCard() {
@@ -12,7 +13,7 @@ export default function NotificationCard() {
 
     return (
 
-        <Card sx={{ p: 1 ,mb:3}}>
+        <Card sx={{ p: 1, mb: 3 }}>
             <CardHeader
                 title={<b>Notifications</b>}
                 action={<Button href="#text-buttons">see more</Button>}
@@ -20,7 +21,7 @@ export default function NotificationCard() {
             <Divider variant='middle' />
             <CardContent>
                 <List>
-                    <ListItemButton sx={{color:"red"}}>
+                    <ListItemButton sx={{ color: "red" }}>
                         <Grid container>
                             <Grid item xs={1}>
                                 <CircleIcon sx={{ fontSize: '10px' }} />
@@ -34,7 +35,7 @@ export default function NotificationCard() {
                                 </Typography>
                             </Grid>
                             <Grid item xs={1}>
-                                <ChevronRightIcon sx={{color: 'black'}}/>
+                                <OutOfSpaceModal />
                             </Grid>
                         </Grid>
                     </ListItemButton>
@@ -54,7 +55,9 @@ export default function NotificationCard() {
                                 </Typography>
                             </Grid>
                             <Grid item xs={1}>
-                                <ChevronRightIcon />
+                                <button style={{ border: 'none', background: 'transparent' }}>
+                                    <ChevronRightIcon />
+                                </button>
                             </Grid>
                         </Grid>
                     </ListItemButton>
@@ -73,7 +76,9 @@ export default function NotificationCard() {
                                 </Typography>
                             </Grid>
                             <Grid item xs={1}>
-                                <ChevronRightIcon />
+                                <button style={{ border: 'none', background: 'transparent' }}>
+                                    <ChevronRightIcon />
+                                </button>
                             </Grid>
                         </Grid>
                     </ListItemButton>
@@ -92,7 +97,9 @@ export default function NotificationCard() {
                                 </Typography>
                             </Grid>
                             <Grid item xs={1}>
-                                <ChevronRightIcon />
+                                <button style={{ border: 'none', background: 'transparent' }}>
+                                    <ChevronRightIcon />
+                                </button>
                             </Grid>
                         </Grid>
                     </ListItemButton>

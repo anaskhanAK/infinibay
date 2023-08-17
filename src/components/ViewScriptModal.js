@@ -12,7 +12,8 @@ import CloseIcon from '@mui/icons-material/Close';
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import FormControlLabel from '@mui/material/FormControlLabel';
 import Checkbox from '@mui/material/Checkbox';
-import { PlayArrow, Stop } from '@mui/icons-material';
+import { PlayArrow } from '@mui/icons-material';
+import SheduleModal from './SheduleModal';
 
 
 
@@ -120,9 +121,10 @@ export default function ViewScript() {
                                     <Button variant="contained" startIcon={<PlayArrow />} sx={{ marginRight: '10px'}}>
                                         Run Now
                                     </Button>
-                                    <Button variant="outlined" startIcon={<Stop />}>
+                                    <SheduleModal/>
+                                    {/* <Button variant="outlined" startIcon={<Stop />}>
                                         Schedule
-                                    </Button>
+                                    </Button> */}
                                 </Box>
                             </Box>
                         </Box>

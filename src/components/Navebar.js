@@ -10,6 +10,7 @@ import MenuOpenIcon from '@mui/icons-material/MenuOpen';
 import Badge from '@mui/material/Badge';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import LogoutIcon from '@mui/icons-material/Logout';
+import { KeyboardArrowUp } from '@mui/icons-material';
 
 
 
@@ -189,7 +190,7 @@ export default function Navebar({ handleDrawer }) {
                 variant="contained"
                 disableElevation
                 onClick={handleClick}
-                endIcon={<KeyboardArrowDownIcon />}
+                endIcon={open ? <KeyboardArrowUp/> : <KeyboardArrowDownIcon />}
                 sx={{ background: 'white', color: 'black', borderRadius: '8px', paddingLeft: '10px', paddingRight: '10px', textTransform: 'capitalize' }}
             >
                 <StyledBadge
