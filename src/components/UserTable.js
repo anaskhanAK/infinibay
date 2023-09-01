@@ -101,7 +101,7 @@ export default function UserTable() {
         {
 
             id: 2,
-            userImage: 'https://s3-alpha-sig.figma.com/img/3e7e/1346/9f9936fa68f41c17b224a071bea60ef2?Expires=1692576000&Signature=PA7sPc4VnhGeI1q1M9UKqSKEQfeGmo7-TiNOzYza6s2cdrnv1lKjAlz7erc8zyGumTyLAzd5zmqr6NrU90dcqEwZ7ZurUbARB6eZDryjlBsQUJjzwEoTxjrFJnzk3c7TiHGk1d8bnCGx9QLm23hPDYLiNyjApZ1ni9BJTrUyiu9UEHa0EI1jYzSTOybVsVD9OFbljAr-GCYzBnQP6KMlLAsbztYnY5Yv-G~pOxnZLO7jfVupGjnl~9HccapzQzKG2N~-ZYfIjlMdPGq6OzjoLfCWZXSsV31bVmZkHFbFewYWT-pNqHMeIx~4RXES5N7SFVLtNwpWY29uQFfTILivtw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+            userImage: 'userI1.png',
             userName: 'kristin.watson02',
             firstName: 'Kristin',
             lastName: 'Watson',
@@ -110,7 +110,7 @@ export default function UserTable() {
         },
         {
             id: 3,
-            userImage: 'https://s3-alpha-sig.figma.com/img/728c/3b1d/33fe647a46f9bf668322f8c1d94ed937?Expires=1692576000&Signature=Q1vgUiS2yysH0w44p4oqRHPMID2akna~phJup6pm6kgDPwFFb9O~hcksEcTA0hOcR8hgWmtJjoKh63QdJUkjacUfhzBdtRdoDsvL09z4j1QoZnfIgpLFO3DkuuAqzOPep5tQdY1uktdmZAmcWYlcsGqi6fy0GPAYT4ZypMIZMbGG6TTtDVJ3y~cKBShWo8KvhJOZZCFZcapYu~-CERD9X0jHHM2DHUHv12ctCz~UptbxIomab0p9wID8ip0dxBBGQhnRd~Lcm9Gj55ur8uzTGyeDaTgOI3r-5PLsa7OvC3aROGjnPzvRPsj8xa-NbGXp-J481ZS-iDRPRj5pppL8aw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+            userImage: 'userI2.png',
             userName: 'johnnc001',
             firstName: 'John',
             lastName: 'Cooper',
@@ -119,7 +119,7 @@ export default function UserTable() {
         },
         {
             id: 4,
-            userImage: 'https://s3-alpha-sig.figma.com/img/7fdc/cc78/3264eedc4fb989984eecbc4058a219f2?Expires=1692576000&Signature=pmxCoubvj0Q48UlrfUMN~DRyzsOWh5YoCzNAmFWWUJss6brFrWq7E~-NrmlOZBNcZZU17E7URm5KkcJYSFS7xOG1lhSlYMV-0Em6CsvaexDsDJpse2SRzzuq13-gHoZX8rDWrqc6QkmsIi4nO4WhL9q1XuXcy~7OMku-MldXDokvUDtRAmQa53uzw9g47bj6X~eNZQoB3tJvu~UN1L~1F93HHqjqM~84FgPaAnafuC3yRhKnPPynwVfkU3FKk6maYQhsOudmHquRZv~TG966l~dZ7jabyEilHgP0oN2l2TY0Zbk3VpyYv6RC1T3Rtvx~~I3pBwxkMrG4NnjCla3uSg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+            userImage: 'userI3.png',
             userName: 'jones.jacob23',
             firstName: 'Jacob',
             lastName: 'Jones',
@@ -138,7 +138,7 @@ export default function UserTable() {
         {
 
             id: 6,
-            userImage: 'https://s3-alpha-sig.figma.com/img/3e7e/1346/9f9936fa68f41c17b224a071bea60ef2?Expires=1692576000&Signature=PA7sPc4VnhGeI1q1M9UKqSKEQfeGmo7-TiNOzYza6s2cdrnv1lKjAlz7erc8zyGumTyLAzd5zmqr6NrU90dcqEwZ7ZurUbARB6eZDryjlBsQUJjzwEoTxjrFJnzk3c7TiHGk1d8bnCGx9QLm23hPDYLiNyjApZ1ni9BJTrUyiu9UEHa0EI1jYzSTOybVsVD9OFbljAr-GCYzBnQP6KMlLAsbztYnY5Yv-G~pOxnZLO7jfVupGjnl~9HccapzQzKG2N~-ZYfIjlMdPGq6OzjoLfCWZXSsV31bVmZkHFbFewYWT-pNqHMeIx~4RXES5N7SFVLtNwpWY29uQFfTILivtw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+            userImage: 'userI1.png',
             userName: 'kristin.watson02',
             firstName: 'Kristin',
             lastName: 'Watson',
@@ -147,7 +147,7 @@ export default function UserTable() {
         },
         {
             id: 7,
-            userImage: 'https://s3-alpha-sig.figma.com/img/728c/3b1d/33fe647a46f9bf668322f8c1d94ed937?Expires=1692576000&Signature=Q1vgUiS2yysH0w44p4oqRHPMID2akna~phJup6pm6kgDPwFFb9O~hcksEcTA0hOcR8hgWmtJjoKh63QdJUkjacUfhzBdtRdoDsvL09z4j1QoZnfIgpLFO3DkuuAqzOPep5tQdY1uktdmZAmcWYlcsGqi6fy0GPAYT4ZypMIZMbGG6TTtDVJ3y~cKBShWo8KvhJOZZCFZcapYu~-CERD9X0jHHM2DHUHv12ctCz~UptbxIomab0p9wID8ip0dxBBGQhnRd~Lcm9Gj55ur8uzTGyeDaTgOI3r-5PLsa7OvC3aROGjnPzvRPsj8xa-NbGXp-J481ZS-iDRPRj5pppL8aw__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+            userImage: 'userI2.png',
             userName: 'johnnc001',
             firstName: 'John',
             lastName: 'Cooper',
@@ -156,7 +156,7 @@ export default function UserTable() {
         },
         {
             id: 8,
-            userImage: 'https://s3-alpha-sig.figma.com/img/7fdc/cc78/3264eedc4fb989984eecbc4058a219f2?Expires=1692576000&Signature=pmxCoubvj0Q48UlrfUMN~DRyzsOWh5YoCzNAmFWWUJss6brFrWq7E~-NrmlOZBNcZZU17E7URm5KkcJYSFS7xOG1lhSlYMV-0Em6CsvaexDsDJpse2SRzzuq13-gHoZX8rDWrqc6QkmsIi4nO4WhL9q1XuXcy~7OMku-MldXDokvUDtRAmQa53uzw9g47bj6X~eNZQoB3tJvu~UN1L~1F93HHqjqM~84FgPaAnafuC3yRhKnPPynwVfkU3FKk6maYQhsOudmHquRZv~TG966l~dZ7jabyEilHgP0oN2l2TY0Zbk3VpyYv6RC1T3Rtvx~~I3pBwxkMrG4NnjCla3uSg__&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4',
+            userImage: 'userI3.png',
             userName: 'jones.jacob23',
             firstName: 'Jacob',
             lastName: 'Jones',

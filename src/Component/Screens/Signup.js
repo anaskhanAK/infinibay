@@ -19,7 +19,6 @@ export default function Signup() {
           borderEndEndRadius: 50,
           borderStartEndRadius: 50,
           padding: "7%",
-          // display: "flex",
           justifyContent: "center",
           alignItems: "center",
         }}
